@@ -11,7 +11,7 @@ public class MoveFollower : MonoBehaviour
     //public GameObject mainCharacter;
     public Transform Last;
     public GameObject mainCharacter;
-   public int i = 2;
+   public float i = 1.5f;
 
     public void Awake()
     {
@@ -36,9 +36,9 @@ public class MoveFollower : MonoBehaviour
             Last.position.z + i // last character pos.z + 5
             );
         //transform.position = new Vector3(
-        //  Mathf.Lerp(transform.position.x, Last.position.x, Time.deltaTime * 20),  //we provide smoothly
-        //  transform.position.y,
-        //  Last.position.z - i // last character pos.z + 5
+        //  transform.position.x,  //we provide smoothly
+        //  Last.position.y+1,
+        //  transform.position.z // last character pos.z + 5
         //  );
 
 

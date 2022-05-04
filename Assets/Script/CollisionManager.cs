@@ -10,8 +10,7 @@ public class CollisionManager : MonoBehaviour
     public GameObject Follower;
     MoveFollower move;
     void Start()
-    {
-
+    {   
 
     }
 
@@ -26,7 +25,7 @@ public class CollisionManager : MonoBehaviour
         
         if (other.gameObject.CompareTag("Follower"))
         {
-            dnm();
+            other.gameObject.GetComponent<FollowerAnimControl>().Run_on = true;
             Debug.Log("we hit");
             other.transform.position = transform.position + new Vector3(0, 0, 5);
             Destroy(transform.GetComponent<CollisionManager>());
@@ -58,11 +57,4 @@ public class CollisionManager : MonoBehaviour
         }
     }
 
-
-    void dnm()
-    {
-        return;
-        MoveFollower.instance.GetComponent<MoveFollower>().i = MoveFollower.instance.GetComponent<MoveFollower>().i + 5;
-
-    }
 }

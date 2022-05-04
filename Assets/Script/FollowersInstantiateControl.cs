@@ -40,7 +40,7 @@ public class FollowersInstantiateControl : MonoBehaviour
 
 
         //RedFollower instantiate
-        if (RedFollowersParent.childCount <= 6) // clone 15 followers
+        if (RedFollowersParent.childCount <= 3) // clone 15 followers
         {
             GameObject InstantiateFollower = (GameObject)Instantiate(Redfollower, new Vector3(Xvalues[Random.RandomRange(1, 3)], transform.position.y, Random.Range(-10, 238)), Quaternion.identity);
             float distance = Mathf.Abs(InstantiateFollower.transform.position.z - MainCharacter.transform.position.z);
@@ -78,7 +78,7 @@ public class FollowersInstantiateControl : MonoBehaviour
 
 
         }
-        if (YellowFollowersParent.childCount <= 6) // clone 15 followers
+        if (YellowFollowersParent.childCount <= 3) // clone 15 followers
         {
             GameObject InstantiateFollower = (GameObject)Instantiate(Yellowfollower, new Vector3(Xvalues[Random.RandomRange(1, 3)], transform.position.y, Random.Range(-10, 238)), Quaternion.identity);
             float distance = Mathf.Abs(InstantiateFollower.transform.position.z - MainCharacter.transform.position.z);

@@ -28,11 +28,13 @@ public class PlayerControl : MonoBehaviour
     private void OnTriggerEnter(Collider other) // sort by collision priority.
     {
 
-
+      
 
 
         if (movefollowerscript == null)
         {
+         
+
             if (other.gameObject.transform.tag == "Follower")
             {
 
@@ -47,10 +49,10 @@ public class PlayerControl : MonoBehaviour
 
 
                 }
-                
-                    
 
-                
+
+
+
             }
 
 
