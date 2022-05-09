@@ -9,8 +9,8 @@ public class DoorMovement : MonoBehaviour
     private Vector3 pos1,pos2;
     void Start()
     {
-        pos1 = new Vector3(2f,transform.position.y,transform.position.z);
-        pos2 = new Vector3(-7.44f,transform.position.y,transform.position.z);
+        pos1 = new Vector3(-1.79f,transform.position.y,transform.position.z);
+        pos2 = new Vector3(1.48f,transform.position.y,transform.position.z);
     }
 
     void Update()
