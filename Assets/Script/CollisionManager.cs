@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class CollisionManager : MonoBehaviour
 {
+    
     Vector3 desirePos;
     public GameObject MainCharacter;
     public GameObject Follower;
     MoveFollower move;
-    void Start()
-    {   
 
+
+    void Start()
+    {
     }
 
     void Update()
@@ -25,6 +27,7 @@ public class CollisionManager : MonoBehaviour
         
         if (other.gameObject.CompareTag("Follower"))
         {
+            SoundController.Instance.PlayStackSound();
             other.gameObject.GetComponent<FollowerAnimControl>().Run_on = true;
             Debug.Log("we hit");
             other.transform.position = transform.position + new Vector3(0, 0, 5);
@@ -47,14 +50,8 @@ public class CollisionManager : MonoBehaviour
 
 
 
-        if (other.gameObject.tag == "RedFollower" || other.gameObject.tag == "YellowFollower")
-        {
-            Debug.Log("red or yellow");
-            //Destroy(transform.gameObject.GetComponent<CollisionManager>());
-            //Destroy(transform.gameObject.GetComponent<MoveFollower>());
-
-
-        }
+   
     }
+
 
 }

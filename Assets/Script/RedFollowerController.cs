@@ -9,15 +9,18 @@ public class RedFollowerController : MonoBehaviour
     int RandomPosX, RandomPosZ;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag=="Stacked")
-        {
-            //De1stroy(other.gameObject.transform.GetComponent<MoveFollower>());
-            other.gameObject.SetActive(false);
-            other.gameObject.transform.tag = "Blocked";
-        }
+        //if (other.gameObject.tag=="Stacked")
+        //{
+        //    //De1stroy(other.gameObject.transform.GetComponent<MoveFollower>());
+        //    other.gameObject.SetActive(false);
+        //    other.gameObject.transform.tag = "Blocked";
+        //}
 
       
     }
 
+    private void Start()
+    {
 
+    }
 }
